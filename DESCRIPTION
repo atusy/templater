@@ -1,5 +1,5 @@
 Package: templater
-Title: What the Package Does (One Line, Title Case)
+Title: Templating Typical Use Cases on R
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Atsushi",
@@ -8,7 +8,7 @@ Authors@R:
            email = "atusy.rpkg@gmail.com",
            comment = c(ORCID = "0000-0002-8335-495X"))
 Maintainer: Atsushi Yasumoto <atusy.rpkg@gmail.com>
-Description: What the package does (one paragraph).
+Description: Templating package creation and else.
 License: MIT + file LICENSE
 URL: https://templater.atusy.net,
     https://github.com/atusy/templater
@@ -17,6 +17,11 @@ Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-Suggests: 
+Imports:
+    knitr,
+    pkgdown,
+    rmarkdown,
+    roxygen2,
     spelling,
-    testthat
+    testthat,
+    usethis
