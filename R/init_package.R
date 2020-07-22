@@ -32,6 +32,7 @@ init_package <- function(path = getwd(), package = basename(path)) {
   setwd(path)
 
   usethis::use_news_md() # must run when nothing to commit
+  download.file('https://raw.githubusercontent.com/github/gitignore/master/R.gitignore', '.gitignore')
   unlink(c('DESCRIPTION', 'README.md'))
   usethis::use_description(usethis_description(package))
   usethis::use_mit_license(usethis_full_name())
@@ -43,5 +44,4 @@ init_package <- function(path = getwd(), package = basename(path)) {
   usethis::use_testthat()
   usethis::use_pkgdown()
   try(usethis::use_github_action_check_full())
-  download.file('https://raw.githubusercontent.com/github/gitignore/master/R.gitignore', '.gitignore')
 }
